@@ -1,0 +1,4 @@
+<%= button_to "Order placed", orders_path(product_id: product_id), method: 'POST', class: "place-order", remote: true %>
+
+<%= button_to "Cancel", delete_order_path(product_id: product_id), method: :delete, class: "place-order", remote: true %>
+	

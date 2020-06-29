@@ -1,0 +1,13 @@
+<div class="product">
+  <%= image_tag "mobile.jpeg" %>
+  <h1><%= product.name %></h1>
+  <p class="price"><%= add_currency(product.price) %></p>
+  <p><%= product.color %></p>
+  <div id= "order_<%= product.id %>">
+		<% if current_user && is_order_placed?(product.id) %>
+			<%= render 'orders/placed_order', product_id: product.id %>
+		<% else %>
+			<%= render 'orders/place_the_order', product_id: product.id %>
+		<% end %>
+	</div>
+</div> 

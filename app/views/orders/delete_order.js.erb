@@ -1,0 +1,3 @@
+query = document.querySelector("#order_<%= params[:product_id] %>");
+query.outerHTML = 
+	"<%= j render 'orders/place_the_order', product_id:  params[:product_id] %>"
